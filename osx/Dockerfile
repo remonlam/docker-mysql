@@ -1,4 +1,4 @@
-FROM mysql
+FROM remonlam/docker-mysql
 MAINTAINER Remon Lam <remon.lam@virtualclouds.info>
 
 ENV MYSQL_USER mysql
