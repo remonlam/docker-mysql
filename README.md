@@ -5,7 +5,9 @@
 The Docker automated builds can be found over here: https://hub.docker.com/r/remonlam/docker-mysql/
 
 ### Pull Docker image
-docker pull remonlam/docker-mysql
+docker pull remonlam/docker-mysql <br>
+#### OSX image
+docker pull remonlam/docker-mysql:osx <br>
 
 ### Start a container based on this image
 docker run --detach \ <br>
