@@ -1,4 +1,4 @@
-FROM debian:jessie
+FROM remonlam/debian-arm:jessie_armv7
 MAINTAINER Remon Lam <remon.lam@virtualclouds.info>
 # add our user and group first to make sure their IDs get assigned consistently, regardless of whatever dependencies get added
 RUN groupadd -r mysql && useradd -r -g mysql mysql
