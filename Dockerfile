@@ -39,7 +39,7 @@ RUN { \
 RUN sed -Ei 's/^(bind-address|log)/#&/' /etc/mysql/my.cnf \
 	&& echo 'skip-host-cache\nskip-name-resolve' | awk '{ print } $1 == "[mysqld]" && c == 0 { c = 1; system("cat") }' /etc/mysql/my.cnf > /tmp/my.cnf \
 	&& mv /tmp/my.cnf /etc/mysql/my.cnf
-
+RUN chown mysql:mysql /var/run/mysqld
 VOLUME /var/lib/mysql
 
 COPY docker-entrypoint.sh /entrypoint.sh
